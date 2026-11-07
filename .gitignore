@@ -1,0 +1,24 @@
+# Sicherungskopien beim Umbauen
+index.vor-*.html
+index.sicherung.html
+*.vor-sprache
+
+# Prüfbilder, entstehen bei jedem Testlauf neu
+pruef-*.png
+fertig-*.png
+kopf-*.png
+schalter-*.png
+en-*.png
+neu-*.png
+
+# Betriebssystem und Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node, falls doch mal etwas installiert wird
+node_modules/
+package-lock.json
+__pycache__/

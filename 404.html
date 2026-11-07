@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seite nicht gefunden | Fonz Studios</title>
+<meta name="description" content="Diese Seite gibt es nicht. Zurück zur Startseite von Fonz Studios.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05080A">
+<link rel="icon" href="favicon.png">
+<style>
+  @font-face{font-family:'Bricolage Grotesque';src:url('schriften/bricolage-grotesque.woff2') format('woff2');font-weight:400 800;font-style:normal;font-display:swap}
+  @font-face{font-family:'Inter Tight';src:url('schriften/inter-tight.woff2') format('woff2');font-weight:300 600;font-style:normal;font-display:swap}
+  @font-face{font-family:'JetBrains Mono';src:url('schriften/jetbrains-mono.woff2') format('woff2');font-weight:400 500;font-style:normal;font-display:swap}
+
+  :root{
+    --ink:#05080A;
+    --sand:#E9DFCB;
+    --sand-dim:#A29A8C;
+    --amber:#FB8500;
+    --stahl:#4E9EC0;
+    --line:rgba(233,223,203,.15);
+    --display:'Bricolage Grotesque','Archivo Black',system-ui,sans-serif;
+    --body:'Inter Tight',system-ui,-apple-system,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;background:var(--ink);color:var(--sand);
+    font-family:var(--body);line-height:1.6;
+    display:grid;place-items:center;
+    padding:32px 20px;
+    text-align:left;
+  }
+
+  /* Schwacher Lichtschein, dieselbe Handschrift wie auf der Startseite */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;
+    background:
+      radial-gradient(900px 520px at 18% -10%, rgba(78,158,192,.16), transparent 62%),
+      radial-gradient(700px 460px at 92% 8%, rgba(251,133,0,.10), transparent 60%);
+  }
+
+  main{position:relative;max-width:560px;width:100%}
+
+  .code{
+    font-family:var(--mono);font-size:11px;font-weight:500;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--stahl);
+    display:block;margin-bottom:18px;
+  }
+  h1{
+    font-family:var(--display);font-weight:800;
+    font-size:clamp(34px,8vw,64px);line-height:1.02;letter-spacing:-.04em;
+    margin:0 0 18px;
+  }
+  h1 em{font-style:normal;color:var(--amber)}
+  p{margin:0 0 26px;color:#C9C0AF;font-size:clamp(15px,1.3vw,17px);max-width:46ch}
+
+  .reihe{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    min-height:46px;padding:0 20px;border-radius:13px;
+    font-size:15px;font-weight:600;letter-spacing:-.01em;
+    text-decoration:none;border:1px solid var(--line);
+    color:var(--sand);background:transparent;
+    transition:transform .4s var(--ease),background .4s var(--ease),border-color .4s var(--ease);
+  }
+  .btn--voll{background:var(--amber);color:#1a0d00;border-color:var(--amber)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn--voll:hover{background:#ff9a26}
+  .btn:not(.btn--voll):hover{border-color:rgba(233,223,203,.34)}
+  .btn:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+  .wege{border-top:1px solid var(--line);padding-top:20px}
+  .wege span{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--sand-dim);
+    display:block;margin-bottom:12px;
+  }
+  .wege ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px}
+  .wege a{color:var(--sand-dim);text-decoration:none;font-size:14.5px;transition:color .3s var(--ease)}
+  .wege a:hover{color:var(--sand)}
+  .wege a:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+  @media(prefers-reduced-motion:reduce){
+    .btn{transition:none}
+    .btn:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="code">Fehler 404</span>
+  <h1>Diese Seite gibt es <em>nicht</em>.</h1>
+  <p>
+    Vielleicht ein Tippfehler in der Adresse, vielleicht ein alter Link.
+    Beides halb so wild. Von hier kommen Sie überall hin.
+  </p>
+
+  <div class="reihe">
+    <a class="btn btn--voll" href="/">Zur Startseite</a>
+    <a class="btn" href="/#anfrage">Seite planen</a>
+  </div>
+
+  <nav class="wege" aria-label="Weitere Seiten">
+    <span>Direkt zu</span>
+    <ul>
+      <li><a href="/#referenzen">Entwürfe</a></li>
+      <li><a href="/#ablauf">So läuft es ab</a></li>
+      <li><a href="/#preise">Preise</a></li>
+      <li><a href="/#fragen">Häufige Fragen</a></li>
+      <li><a href="mailto:fonz.studios@proton.me">E-Mail schreiben</a></li>
+    </ul>
+  </nav>
+</main>
+</body>
+</html>
